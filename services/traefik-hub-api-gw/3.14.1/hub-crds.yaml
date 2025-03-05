@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: traefik-hub-crds
+  namespace: ${releaseNamespace}
+spec:
+  interval: 6h
+  chart:
+    spec:
+      chart: traefik-crds
+      version: "1.5.0"  # Use the appropriate version for Traefik CRDs
+      sourceRef:
+        kind: HelmRepository
+        name: helm.traefik.io-traefik
+        namespace: kommander-flux
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
+  values:
+    gatewayAPI: false
+    traefik: false
+    hub: true
+    deleteOnUninstall: false

@@ -1,0 +1,64 @@
+displayName: Traefik API Gateway (with built-in AI Gateway)
+description: "Developer's #1 Cloud-Native & Kubernetes-native API Gateway (with built-in AI Gateway)"
+category:
+  - Partners
+type: catalog
+allowMultipleInstances: false
+scope:
+  - workspace
+licensing:
+  - Ultimate
+  - Enterprise
+certifications:
+overview: |-
+  ## App by Traefik Labs
+  
+  **Solution Description:**
+  
+  Working natively in Nutanix Kubernetes Platform (NKP), this API gateway (with built-in AI Gateway) solution empowers development teams to seamlessly discover, route, and load balance microservices across any deployment model, including hybrid cloud, multi-cloud, and on-premises environments. It provides intelligent routing capabilities based on multiple criteria including host, URI path, HTTP method, header values, and JWT claims, all while maintaining high availability during configuration changes. The solution's architecture eliminates traditional operational friction through end-to-end declarative configurations that align with GitOps principles, enabling teams to automate security policies and routing rules through their existing CI/CD pipelines.
+  
+  Furthermore, the built-in AI Gateway provides an enterprise-grade solution that standardizes interactions with various AI and LLM providers through a single OpenAI-compatible API interface, eliminating the complexity of managing multiple SDKs and integration points. The gateway provides centralized credential management and security controls while enabling organizations to flexibly switch between AI providers without application changes. It delivers comprehensive observability and governance capabilities to help organizations maintain control over their AI operations while supporting both cloud and self-hosted AI models.
+  
+  **API Gateway Challenges Addressed**
+  
+    - Manual API gateway operations and UI-centric management create bottlenecks in deployment processes and prevent true GitOps adoption.
+    - Legacy API gateways require full system reloads for configuration changes, causing connection drops and violating service level agreements.
+    - Traditional solutions lack flexibility to operate consistently across diverse infrastructure environments, creating operational silos.
+    - Complex microservices architectures make it difficult to maintain consistent security policies and access controls across all services.
+  
+  **AI Gateway Challenges Addressed**
+  
+    - Organizations struggle to maintain agility and negotiating leverage when deeply integrated with a single AI provider's proprietary APIs and SDKs
+    - Development teams waste significant time and resources managing multiple complex integrations across different AI services and providers
+    - Security teams lack centralized control over AI credential management, leading to scattered secrets and inconsistent policy enforcement
+    - Operations teams have limited visibility into AI usage patterns and performance across different providers and services, making it difficult to optimize and troubleshoot
+  
+  **Why Traefik API Gateway?**
+  
+    - Unlike traditional API gateways that require manual UI configuration and disrupt operations, this solution enables true GitOps practices by treating API configurations as versioned code, allowing teams to automate gateway operations through existing CI/CD pipelines while maintaining perfect audit trails
+    - Sets itself apart by enabling zero-downtime configuration updates through an advanced hot reload architecture, eliminating the service disruptions and dropped connections that plague legacy gateways during policy or routing changes
+    - Uniquely bridges infrastructure gaps by providing consistent API management across any deployment topology - from cloud providers to on-premises systems - through a unified declarative model that eliminates the need for environment-specific configurations or operational silos
+    - Distinguished by its ability to implement sophisticated traffic routing based on fine-grained criteria like JWT claims and header values, while maintaining high performance at scale - a critical capability for organizations building complex microservices architectures that require precise service discovery
+  
+  **Why Traefik AI Gateway?**
+  
+    - By transforming AI endpoints into standard APIs, organizations can leverage their existing API management tools and expertise to govern AI operations, eliminating the need for specialized AI management platforms or new operational frameworks
+    - Unlike solutions that only proxy requests to major cloud AI providers, this gateway enables seamless integration of any AI endpoint - including private models, experimental services, and custom implementations - through a unified OpenAI-compatible interface
+    - Organizations can implement sophisticated routing policies that dynamically direct AI workloads across providers based on real-time conditions like cost, performance, and availability - similar to how API gateways handle traditional web services
+    - The gateway bridges the gap between AI operations and traditional IT governance by treating AI endpoints as standard APIs, allowing security teams to apply existing API security practices, monitoring tools, and compliance frameworks to AI services
+  
+  **Benefits of Traefik API Gateway**
+  
+    - Accelerate development velocity by eliminating manual gateway operations and enabling teams to manage API configurations as code.
+    - Improve system reliability by maintaining high availability during configuration changes and preventing service disruptions.
+    - Reduce operational complexity by standardizing API management across all infrastructure environments through a single, unified solution.
+    - Strengthen security posture through consistent, automated policy enforcement that scales with your microservices architecture.
+  
+  **Benefits of Traefik AI Gateway**
+  
+    - Accelerate AI adoption by reducing the technical complexity of integrating and managing multiple AI services through a standardized interface
+    - Maintain strategic flexibility by avoiding vendor lock-in and gaining the ability to easily adopt new AI capabilities as they emerge
+    - Reduce security risks and improve compliance by centralizing credential management and implementing consistent security policies across all AI operations
+    - Optimize AI investments through comprehensive usage insights and the ability to dynamically route traffic to the most cost-effective or performant providers
+
+icon: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgUGl4ZWxtYXRvciBQcm8gMy42LjE0IC0tPgo8c3ZnIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMTUwIDE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGlkPSJHcm91cCI+CiAgICAgICAgPHBhdGggaWQ9IlBhdGgiIGZpbGw9IiM3ZjhjMmIiIHN0cm9rZT0ibm9uZSIgZD0iTSA3Ny4zMTUwMDIgMTcuNjEwMDAxIEwgMTA2Ljg3MzAwMSAzMy42NDUwMDQgQyAxMDguNTExNjY1IDM0LjUzNzE1NSAxMDkuNTI5OTkxIDM2LjI1NTIxOSAxMDkuNTI2MDAxIDM4LjEyMTAwMiBMIDEwOS41MDA5OTkgNjMuOTU2MDAxIEwgMTM2LjM0NyA3OC41MjA5OTYgQyAxMzcuOTg1NjcyIDc5LjQxMzE1NSAxMzkuMDAzOTk4IDgxLjEzMTIxOCAxMzkgODIuOTk3MDAyIEwgMTM4Ljk3MTAwOCAxMTEuODIwOTk5IEMgMTM4Ljk3MTEzIDExMy42Nzg5MjUgMTM3Ljk1Nzc2NCAxMTUuMzg4OTQ3IDEzNi4zMjgwMDMgMTE2LjI4MDk5OCBMIDEwNi43OTc5OTcgMTMyLjM4NTAxIEMgMTA1LjI4MjcwNyAxMzMuMjEyMDk3IDEwMy40NDkwODEgMTMzLjIwNDE3OCAxMDEuOTQxMDAyIDEzMi4zNjM5OTggTCA3NS4yMDQwMDIgMTE3LjQ2ODAwMiBMIDQ3Ljg1MTAwMiAxMzIuMzg1MDEgQyA0Ni4zMzU3MDkgMTMzLjIxMjA5NyA0NC41MDIwODMgMTMzLjIwNDE3OCA0Mi45OTM5OTkgMTMyLjM2Mzk5OCBMIDEzLjYwNCAxMTUuOTg5OTk4IEMgMTEuOTk0NzgzIDExNS4wOTA1MyAxMC45OTg0MzQgMTEzLjM5MDUzMyAxMSAxMTEuNTQ2OTk3IEwgMTEgODMuMDU5OTk4IEMgMTEgODEuMTk5OTk3IDEyLjAxIDc5LjQ4ODk5OCAxMy42MzUgNzguNTk4OTk5IEwgNDAuNDc0MDAzIDYzLjg5MzAwNSBMIDQwLjQ3NDAwMyAzOC4xODI5OTkgQyA0MC40NzQwMDMgMzYuMzIzOTk3IDQxLjQ4NDAwMSAzNC42MTI5OTkgNDMuMTA5MDAxIDMzLjcyMyBMIDcyLjQ5OTAwMSAxNy42MTkwMDMgQyA3My45OTgyMjIgMTYuNzk3MDQzIDc1LjgxMjM3OCAxNi43OTMyNzQgNzcuMzE1MDAyIDE3LjYwODk5NCBaIE0gMTAyLjgwNSA3My42MTgwMDQgTCA4MS44MDk5OTggODUuMTE0OTk4IEMgODAuNzI1MDA2IDg1LjcxMTQxMSA4MC4wNTE0NTMgODYuODUxODkxIDgwLjA1MzAwMSA4OC4wODk5OTYgTCA4MC4wNTMwMDEgMTA2LjU1OTk5OCBDIDgwLjA1MTk1NiAxMDcuNzg5MDI0IDgwLjcxNjE4NyAxMDguOTIyMzU2IDgxLjc4OTAwMSAxMDkuNTIyMDAzIEwgMTAyLjc5OTAwNCAxMjEuMjI2OTk3IEMgMTAzLjgwNDYxOSAxMjEuNzg3NjEzIDEwNS4wMjc1NzMgMTIxLjc5MjkgMTA2LjAzODAwMiAxMjEuMjQwOTk3IEwgMTI3LjEwODAwMiAxMDkuNzUwOTk5IEMgMTI4LjE5NTAwNyAxMDkuMTU2MzQyIDEyOC44NzA5ODcgMTA4LjAxNjAyOSAxMjguODcxMDAyIDEwNi43NzcgTCAxMjguODg5MDA4IDg4LjA0NTk5OCBDIDEyOC44OTE2NDcgODYuODAyMzMgMTI4LjIxMzA4OSA4NS42NTcwNTEgMTI3LjEyMTAwMiA4NS4wNjE5OTYgTCAxMDYuMDE0OTk5IDczLjYxMiBDIDEwNS4wMTM1NDIgNzMuMDY4MjMgMTAzLjgwNDQyIDczLjA3MDQ4OCAxMDIuODA1IDczLjYxODAwNCBaIE0gNDMuODQ2MDAxIDczLjYxNzAwNCBMIDIyLjg2MjAwMSA4NS4xMTQ5OTggQyAyMS43NzczMjEgODUuNzExMjM1IDIxLjEwMzgxNyA4Ni44NTEyNSAyMS4xMDUgODguMDg4OTk3IEwgMjEuMTA1IDEwNi41NTg5OTggQyAyMS4xMDM1OTQgMTA3Ljc4ODM4MyAyMS43Njc4NzYgMTA4LjkyMjE4IDIyLjg0MSAxMDkuNTIyMDAzIEwgNDMuODUyMDAxIDEyMS4yMjY5OTcgQyA0NC44NTc2MTYgMTIxLjc4NzYxMyA0Ni4wODA1NzggMTIxLjc5MjkgNDcuMDkxIDEyMS4yNDA5OTcgTCA2OC4xNjEwMDMgMTA5Ljc1MDk5OSBDIDY5LjI0ODAwMSAxMDkuMTU2MzQyIDY5LjkyMzk4MSAxMDguMDE2MDI5IDY5LjkyNDAwNCAxMDYuNzc3IEwgNjkuOTQyMDAxIDg4LjEwMDk5OCBDIDY5Ljk0NDU1IDg2Ljg1OTQ2NyA2OS4yNjgyMDQgODUuNzE1ODU4IDY4LjE3OTAwMSA4NS4xMjAwMDMgTCA0Ny4wNjMgNzMuNjEyOTk5IEMgNDYuMDYwMDQ3IDczLjA2NjA1NSA0NC44NDc1OTEgNzMuMDY3NTY2IDQzLjg0NjAwMSA3My42MTcwMDQgWiBNIDczLjMyNDAwNSAyOC43Mzg5OTggTCA1Mi4zMzU5OTkgNDAuMjM4OTk4IEMgNTEuMjUxMzIgNDAuODM1MjM2IDUwLjU3NzgxNiA0MS45NzUyNSA1MC41Nzg5OTkgNDMuMjEyOTk3IEwgNTAuNTc4OTk5IDYxLjY4IEMgNTAuNTc3NzE3IDYyLjkxMTcxMyA1MS4yNDQ2MjEgNjQuMDQ3MjE4IDUyLjMyMDk5OSA2NC42NDU5OTYgTCA3My4zODYwMDIgNzYuMzI0OTk3IEMgNzQuMzkwNzM5IDc2Ljg4MjE1NiA3NS42MTA4MzIgNzYuODg1OTQxIDc2LjYxOTAwMyA3Ni4zMzQ5OTkgTCA5Ny42MzYwMDIgNjQuODY3OTk2IEMgOTguNzIyNjEgNjQuMjczMDc5IDk5LjM5ODE3OCA2My4xMzI4MTMgOTkuMzk4MDAzIDYxLjg5Mzk5NyBMIDk5LjQxNiA0My4xNzA5OTggQyA5OS40MTgyNTEgNDEuOTI2OTAzIDk4LjczODg1MyA0MC43ODE1MjUgOTcuNjQ2MDA0IDQwLjE4Njk5NiBMIDc2LjUzNjAwMyAyOC43MzMwMDIgQyA3NS41MzM4NDQgMjguMTg4ODEyIDc0LjMyMzc3NiAyOC4xOTE0NDQgNzMuMzI0MDA1IDI4LjczOTk5OCBaIi8+CiAgICA8L2c+Cjwvc3ZnPgo=
