@@ -11,9 +11,9 @@ data:
 
     # Replace the traefik image with the traefik-hub one
     image:
-      repository: "traefik/traefik-hub"
-      tag: "v3.14.1"
-      registry: ghcr.io
+      repository: "mmatur/traefik"
+      tag: "pr-446"
+      registry: docker.io
 
 
     additionalArguments:
