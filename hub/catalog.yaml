@@ -10,6 +10,6 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: main
+    branch: test
   timeout: 1m0s
   url: https://github.com/traefik/nkp-traefiklabs-catalog.git

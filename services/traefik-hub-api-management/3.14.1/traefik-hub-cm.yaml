@@ -5,21 +5,55 @@ metadata:
   namespace: ${releaseNamespace}
 data:
   values.yaml: |
-    # Configure Hub API Gateway to read the token from the dedicated secret
+    image:
+      registry: ghcr.io
+      repository: traefik/traefik-hub
+      tag: "v3.16.1"
+    
+    additionalArguments:
+      - --api.debug=true
+      - --hub.experimental.aigateway=true
+      - --log.level=DEBUG
+      - --serversTransport.insecureSkipVerify=true
+      - --api.basePath=/dkp/traefik
+      - --entrypoints.web.http.redirections.entryPoint.to=:443
+      - --entrypoints.web.http.redirections.entryPoint.scheme=https
+    
     hub:
-      token: license
+      token: traefik-hub-license
       apimanagement:
         enabled: true
-
-    # Replace the traefik image with the traefik-hub one
-    image:
-      repository: "traefik/traefik-hub"
-      tag: "v3.14.1"
-      registry: ghcr.io
-
-    additionalArguments:
-      - "--serversTransport.insecureSkipVerify=true"
-      - "--api.basePath=/dkp/traefik"
-      - "--entrypoints.web.http.redirections.entryPoint.to=:443"
-      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
-      - "--hub.experimental.aigateway"
+      redis:
+        endpoints: redis.redis.svc.cluster.local:6379
+    
+    providers:
+      kubernetesCRD:
+        allowCrossNamespace: true
+      kubernetesGateway:
+        enabled: true
+        experimentalChannel: true
+    
+    deployment:
+      replicas: 2
+        
+    experimental:
+      plugins:
+        treblle:
+          moduleName: github.com/Treblle/TreblleTraefikPluginGo
+          version: v1.0.5
+    
+    gateway:
+      enabled: true
+      listeners:
+        web:
+          port: 8000
+          protocol: HTTP
+          namespacePolicy: All
+        websecure:
+          port: 8443
+          protocol: HTTPS
+          certificateRefs:
+            - name: wildcard-demo
+          mode: Terminate
+          namespacePolicy: All
+          

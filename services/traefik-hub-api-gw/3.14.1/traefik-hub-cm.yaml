@@ -5,20 +5,49 @@ metadata:
   namespace: ${releaseNamespace}
 data:
   values.yaml: |
-    # Configure Hub API Gateway to read the token from the dedicated secret
-    hub:
-      token: license
-
-    # Replace the traefik image with the traefik-hub one
     image:
-      repository: "mmatur/traefik"
-      tag: "pr-446"
-      registry: docker.io
-
-
+      registry: ghcr.io
+      repository: traefik/traefik-hub
+      tag: "v3.16.1"
+    
     additionalArguments:
-      - "--serversTransport.insecureSkipVerify=true"
-      - "--api.basePath=/dkp/traefik"
-      - "--entrypoints.web.http.redirections.entryPoint.to=:443"
-      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
-      - "--hub.experimental.aigateway"
+      - --api.debug=true
+      - --hub.experimental.aigateway=true
+      - --log.level=DEBUG
+      - --serversTransport.insecureSkipVerify=true
+      - --api.basePath=/dkp/traefik
+      - --entrypoints.web.http.redirections.entryPoint.to=:443
+      - --entrypoints.web.http.redirections.entryPoint.scheme=https
+    
+    hub:
+      token: traefik-hub-license
+      apimanagement:
+        enabled: false
+      redis:
+        endpoints: redis.redis.svc.cluster.local:6379
+    
+    providers:
+      kubernetesCRD:
+        allowCrossNamespace: true
+      kubernetesGateway:
+        enabled: true
+        experimentalChannel: true
+    
+    deployment:
+      replicas: 1
+    
+    gateway:
+      enabled: true
+      listeners:
+        web:
+          port: 8000
+          protocol: HTTP
+          namespacePolicy: All
+        websecure:
+          port: 8443
+          protocol: HTTPS
+          certificateRefs:
+            - name: wildcard-demo
+          mode: Terminate
+          namespacePolicy: All
+          
